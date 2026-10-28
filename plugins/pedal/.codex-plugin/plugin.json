@@ -1,0 +1,48 @@
+{
+  "name": "pedal",
+  "version": "0.1.0",
+  "description": "Build CLAP/AU/VST3 effects and synths that Codex can hear and rewire — live, while they run in your DAW.",
+  "author": {
+    "name": "Noetic Systems, LLC",
+    "email": "support@onecorpus.com",
+    "url": "https://pedl.studio"
+  },
+  "homepage": "https://pedl.studio",
+  "repository": "https://github.com/noetic-sys/pedal-plugins.git",
+  "license": "LicenseRef-Pedal-Proprietary",
+  "keywords": [
+    "pedal",
+    "audio",
+    "dsp",
+    "clap",
+    "au",
+    "vst3",
+    "synth",
+    "effects",
+    "daw",
+    "mcp"
+  ],
+  "mcpServers": "./mcp.codex.json",
+  "skills": "./skills",
+  "interface": {
+    "displayName": "Pedal",
+    "shortDescription": "Author live CLAP/AU/VST3 pedals and synths from Codex.",
+    "longDescription": "Pedal is a CLAP/AU/VST3 plugin whose DSP is a node graph you edit while it runs. With this plugin, Codex can inspect the graph of a pedal loaded in your DAW, rewire it, bind knobs, render audio to hear the result, and hot-swap the change into the running instance — no reload, no rebuild. Describe the sound you want and iterate on it by ear.",
+    "developerName": "Noetic Systems, LLC",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://pedl.studio",
+    "privacyPolicyURL": "https://pedl.studio/legal/privacy",
+    "brandColor": "#2e8c7b",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg",
+    "defaultPrompt": [
+      "Make the delay darker and give me a feedback knob",
+      "Build me a gritty fuzz with a tone control, then let me hear it",
+      "This synth patch sounds thin — find the problem and fix it"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "pedal",
+  "displayName": "Pedal",
+  "version": "0.1.0",
+  "description": "Build CLAP/AU/VST3 effects and synths that Claude can hear and rewire — live, while they run in your DAW.",
+  "author": {
+    "name": "Noetic Systems, LLC",
+    "email": "support@onecorpus.com",
+    "url": "https://pedl.studio"
+  },
+  "homepage": "https://pedl.studio",
+  "repository": "https://github.com/noetic-sys/pedal-plugins",
+  "license": "LicenseRef-Pedal-Proprietary",
+  "keywords": [
+    "pedal",
+    "audio",
+    "dsp",
+    "clap",
+    "au",
+    "vst3",
+    "synth",
+    "effects",
+    "daw",
+    "mcp"
+  ],
+  "mcpServers": "./mcp.claude.json"
+}

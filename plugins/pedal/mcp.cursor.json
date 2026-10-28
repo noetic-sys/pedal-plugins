@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "pedal": {
+      "command": "${userHome}/.pedal/bin/pedal-mcp"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "pedal": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "exec \"$HOME/.pedal/bin/pedal-mcp\""
+      ]
+    }
+  }
+}

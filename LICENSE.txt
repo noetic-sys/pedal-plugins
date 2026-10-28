@@ -1,0 +1,75 @@
+Pedal Agent Plugin License — DRAFT
+
+> STATUS: DRAFT — for attorney review before public release.
+> Consistent with the Pedal EULA, this is a starting point, not legal advice.
+
+Copyright (c) 2026 Noetic Systems, LLC ("Licensor"). All rights reserved.
+
+This repository contains the Pedal agent plugins for Claude Code, Cursor, and
+Codex — plugin manifests, MCP server configuration, agent skills, rules,
+commands, assets, and validation scripts (together, the "Materials").
+
+The Materials are published so that agent clients and their plugin
+marketplaces can retrieve and install them. They are NOT open source. No
+open-source license is granted, and public visibility is not permission to
+copy, modify, or redistribute them.
+
+1. PERMITTED USE
+
+   Subject to the restrictions below, Licensor grants you a personal,
+   non-exclusive, non-transferable, revocable license to:
+
+   (a) download, install, and use the Materials, unmodified, to connect a
+       compatible agent client to the Pedal software; and
+
+   (b) retain local copies created by that installation for as long as you
+       use them for that purpose.
+
+   Licensor additionally permits operators of agent-client plugin
+   marketplaces and their content-delivery infrastructure to host, cache,
+   index, and distribute the Materials, unmodified and with all notices
+   intact, solely to deliver them to users installing them under (a).
+
+2. RESTRICTIONS
+
+   Except as Section 1 expressly permits, you may not:
+
+   (a) modify the Materials or create derivative works from them;
+   (b) reproduce, publish, distribute, sublicense, sell, or otherwise
+       transfer the Materials to any third party;
+   (c) remove, obscure, or alter any copyright, license, or attribution
+       notice;
+   (d) use the Materials, or the interfaces they describe, to develop a
+       product or service that competes with Pedal; or
+   (e) represent the Materials, or anything derived from them, as your own.
+
+3. PEDAL SOFTWARE
+
+   The Materials configure access to the Pedal software but do not license
+   it. Your use of Pedal is governed separately by the Pedal End User
+   License Agreement and requires a valid Pedal license.
+
+4. RESERVATION OF RIGHTS
+
+   Licensor retains all right, title, and interest in the Materials,
+   including all copyright, trademark, patent, and trade-secret rights. No
+   rights are granted by implication or estoppel.
+
+5. NO WARRANTY
+
+   THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+6. LIMITATION OF LIABILITY
+
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR SHALL NOT BE LIABLE FOR
+   ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM OR IN CONNECTION WITH
+   THE MATERIALS OR THEIR USE.
+
+7. TERMINATION
+
+   This license terminates automatically if you breach any term. On
+   termination you must stop using and delete all copies of the Materials.
+
+Questions: https://pedl.studio

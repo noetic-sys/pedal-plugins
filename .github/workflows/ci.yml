@@ -1,0 +1,26 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate all three client packagings
+        run: node scripts/validate.mjs
+
+      - name: Cursor deeplink regenerates cleanly
+        run: node scripts/deeplink.mjs | grep -q '^cursor://anysphere.cursor-deeplink/mcp/install?name=pedal&config='
+
+      - name: Claude Code manifest validation
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate .
+          claude plugin validate ./plugins/pedal

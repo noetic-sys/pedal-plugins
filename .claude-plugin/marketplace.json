@@ -1,0 +1,21 @@
+{
+  "name": "pedal",
+  "owner": {
+    "name": "Noetic Systems, LLC",
+    "email": "support@onecorpus.com",
+    "url": "https://pedl.studio"
+  },
+  "metadata": {
+    "description": "Build CLAP/AU/VST3 effects and synths that your agent can hear and rewire, live.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "pedal",
+      "source": "./plugins/pedal",
+      "description": "Author live CLAP/AU/VST3 pedals and synths over the Pedal MCP server.",
+      "category": "audio",
+      "license": "LicenseRef-Pedal-Proprietary"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+---
+description: How to drive the Pedal MCP server when authoring live CLAP/AU/VST3 pedals and synths.
+globs:
+alwaysApply: false
+---
+
+When any `pedal` MCP tool is in play, follow the `pedal-authoring` skill.
+
+Non-negotiables:
+
+- Call `get_workflow` before your first edit in a session — it is the
+  version-matched source of truth from the running plugin.
+- `sync_live` once; its `spec_id` is stable for the whole session. Every `graph_*`
+  edit mutates it in place. Never thread a new id.
+- `graph_set_output` is required. A patch with no marked output does not compile.
+- Bind at least one macro (`bind_macro`) or the pedal renders faceless, even
+  though it is audible.
+- `validate_spec` and `compile_check` before `apply_to_live`, every time.
+- `apply_to_live` hot-swaps the running plugin; it does **not** save a file.
+  `save_preset` does, and writing to the user's preset library needs their say-so.
+- Close every audio-shaped task with `render_test_signal` (effect) or
+  `render_test_notes` (synth) at `"format": "flac"`, and cite the absolute
+  `audio_path`. A spectrogram or a summary is not proof.
+- "Validates and doesn't clip" is not "sounds good." Run the sound check — body,
+  character, role fit — before reporting done.
