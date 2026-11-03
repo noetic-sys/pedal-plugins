@@ -1,4 +1,4 @@
-# Pedal plugins for coding agents
+# Pedal plugins for agents
 
 Build CLAP/AU/VST3 effects and synths that your agent can hear and rewire —
 live, while they run in your DAW.
