@@ -21,6 +21,14 @@ Before editing DSP, record:
 
 If a screenshot or recording leaves a note uncertain, mark it and test the plausible readings. Do not silently quantize an expressive entrance or invent a note to make the pattern tidy.
 
+When the source is a recording or community MIDI rather than the user's own clip, the recording is the source of truth. Look up tempo and key first (`pedal-reference-research`), never reuse a pattern guessed in an earlier turn, and never turn a chord into an arpeggio or an arpeggio into a chord without evidence.
+
+## Confirm notes and octave before timbre
+
+Before any timbre work, render the phrase on a plain, neutral voice and A/B it against the reference window with `mcp__pedal__listen_audio`. Ask separately about note identity, timing, and octave. For octave, render two candidates — as written and −12 (or +12) — and ask which matches; lock that octave. Transcriptions and community MIDI are often an octave off.
+
+If pitch or octave cannot be confirmed, stop and say so. Do not invent a "close enough" voicing or a second key to unblock timbre work: a convincing patch playing the wrong notes is not a match.
+
 ## Render the right tests
 
 Use `mcp__pedal__render_test_notes` with `stimulus.kind: "clip"` for the actual phrase. Keep the same stimulus across iterations. Set realistic velocities and `release_ms` so tails are audible. Render a held `single_note` only as a secondary envelope diagnostic.
@@ -39,6 +47,7 @@ If the renderer caps duration, fit the first complete phrase inside the cap and 
 - Use continuous phase or mono legato when the reference connects notes without a new attack.
 - Set glide only when pitch travel is audible. Glide can make a clean phrase feel late and soft.
 - Shape articulation with attack, decay, sustain, and release before using a filter sweep to fake a new note.
+- For a chopped or gated part, use a hard square amp envelope: attack and decay about 1 ms, sustain 1, short release. The MIDI note length is the gate. Sustain 0 turns a chop into a pluck and will not match.
 - Preserve velocity differences when they carry groove. Flattening all velocities destroys the performance.
 - Add vibrato or pitch drift only on sustained notes where the reference supports it.
 
@@ -67,6 +76,8 @@ Do not call the performance correct because one note sounds good or the graph co
 
 - "More human" as an adjective, before it becomes a MIDI edit:
   `pedal-producer-language`.
+- Tempo, key, section, and existing MIDI for a named song or recording:
+  `pedal-reference-research`.
 - The user has *not* given you a phrase and you need one before rendering:
   `pedal-audition-stimulus`. That skill owns eliciting the stimulus; this one owns
   recreating a phrase you were given.
