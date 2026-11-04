@@ -22,6 +22,13 @@ to conclude — and where each one lies — read `references/measurement.md`.
 
 Level-match candidate and reference. Compare centroid, rolloff, crest factor, and a spectrogram, then listen. Locate the offending band in Hz and distinguish onset energy from the settled tail.
 
+When matching a reference, measure its long-term average spectrum (LTAS) — `analyze_reference`, or an averaged spectrum of the window — next to your first render before deep iteration. It tells you whether the reference is actually dark or broadband into the highs, which a single listen round cannot.
+
+- Do not close the low-pass because one listen round said "darker." If the reference LTAS is broadband, keep the filter open and move tone with drive, layering, and mild resonance instead. A closed low-pass cliff is a common reason a candidate never gets closer.
+- When the reference has strong sub energy, ask `listen_audio` whether it belongs to this part or is a separate bass underneath. Include or omit a sub layer from that answer; do not high-pass it away by habit, and do not add one by habit.
+
+For the order of changes that usually moves a reference match, read `references/match-order.md`.
+
 If formant or filter motion lands as a whistle, lower the base cutoff or endpoint, reduce resonance/Q, reduce modulation depth or slow the motion, and only then try a narrow bell cut. A broad low-pass can remove useful body while leaving a narrow peak.
 
 ## Attack/body/space diagnostics
@@ -60,6 +67,8 @@ A narrow resonant peak is not the same as overall brightness. A missing low-mid 
 
 - The adjective that sent you here, and keeping the producer's word as the acceptance
   criterion: `pedal-producer-language`.
+- The recipe, synth, and chain behind a named sound, from tutorials and breakdowns:
+  `pedal-reference-research`.
 - Making sure the render can even show the symptom — note length, tempo, register:
   `pedal-audition-stimulus`. A short note hides every tail problem.
 - If the patch is tonally right but static or boring: `pedal-musical-motion`.
