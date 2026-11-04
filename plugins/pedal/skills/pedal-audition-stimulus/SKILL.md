@@ -1,6 +1,6 @@
 ---
 name: pedal-audition-stimulus
-description: Establish how the user actually plays the patch before rendering anything — tempo, note lengths, register, polyphony, and what it sits in — and ask for a piano roll screenshot, a MIDI clip, or a bounce when you do not know. Use before the first render on any audio task, and immediately whenever the user reports hearing something you cannot hear in your own renders.
+description: Establish how the user actually plays the patch before rendering anything — tempo, note lengths, register, polyphony, and what it sits in — looking up anything findable first, and asking for a piano roll screenshot, a MIDI clip, or a bounce only for what research cannot answer. Use before the first render on any audio task, and immediately whenever the user reports hearing something you cannot hear in your own renders.
 ---
 
 # Auditioning what the user actually plays
@@ -36,6 +36,18 @@ Before the first render, know as many of these as you can:
 
 You will rarely have all of them. The requirement is not certainty — it is knowing
 **which ones you are guessing**, and saying so.
+
+## Look it up before you ask
+
+When the brief names a song, artist, section, or sound, or the user handed you a
+recording, most of the contract is findable: published tempo and key, the section
+timestamp, community MIDI, tutorials showing the piano roll. Do that research first,
+per `pedal-reference-research`, and treat a supplied recording as the source of truth
+for notes and timing. Asking a producer for the tempo of a released song reads as not
+trying.
+
+Only what is still unknown after research — usually how *they* play it, and what it
+sits against — goes into the question below.
 
 ## Ask once, batched, with a default attached
 
@@ -124,6 +136,9 @@ your render is the thing that is wrong until proven otherwise.
 
 ## Related skills
 
+- Tempo, key, section, and existing MIDI for anything named: `pedal-reference-research`.
+- Expanding a terse ask into the full brief this contract is part of:
+  `pedal-producer-language`.
 - The user supplied a phrase and recreating it *is* the task:
   `pedal-phrase-performance`. That skill owns the phrase contract and the synth
   behavior choices; this one owns deciding what to render when nobody told you.

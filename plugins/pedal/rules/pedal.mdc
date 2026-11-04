@@ -21,5 +21,8 @@ Non-negotiables:
 - Close every audio-shaped task with `render_test_signal` (effect) or
   `render_test_notes` (synth) at `"format": "flac"`, and cite the absolute
   `audio_path`. A spectrogram or a summary is not proof.
+- When a song, artist, or sound is named, look up tempo, key, section, notes, and
+  recipe before asking the user (`pedal-reference-research`). Expand terse asks
+  into a full brief before acting (`pedal-producer-language`).
 - "Validates and doesn't clip" is not "sounds good." Run the sound check — body,
   character, role fit — before reporting done.
