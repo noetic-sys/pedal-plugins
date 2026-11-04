@@ -81,6 +81,10 @@ from a blank shell. `get_exemplar` when you only need to inspect structure. If t
 user named an instrument, genre, artist, or sound, find the matching exemplar and
 match its **structure** — a plain saw→filter reads boring.
 
+When a song, artist, or sound is named, look up its tempo, key, section, notes, and
+recipe before building or asking (`pedal-reference-research`). When the ask is terse
+or shorthand, expand it into a full brief first (`pedal-producer-language`).
+
 ## Samples
 
 `import_sample { path }` takes an absolute path. Browse the user's own libraries
